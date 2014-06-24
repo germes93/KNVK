@@ -1,0 +1,411 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Личный кабинет</title>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&subset=latin,cyrillic">
+<link type="text/css" rel="stylesheet" href="style.css">
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <!-- jQuery ui slider -->
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+
+    <script src="js/popup.js" type="text/javascript"></script>
+    <script src="js/phone.js" type="text/javascript"></script>
+    <script src="js/valid.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    jQuery(function($){
+       $("#phone").mask("+7 999 999-99-99");
+        $("#nphone").mask("+7 999 999-99-99");
+    });
+    </script>
+
+    
+
+
+
+</head>
+<body>
+	<div class="fon">
+    </div>
+	<div class="karkas" id="karkas">
+    	<header>
+        	<div class="head-navigation">
+            	<div class="head-navigation-left">
+                	<img src="images/logo.png" title="На главную">
+            		<p><span>Здравствуйте, </span>Павел Александрович!</p>
+                    <div class="account">
+                    	<a href="http://pavelkuligin.ru/Cards/index.html">Мои счета</a>
+                        <p>Кредит на карту</p>
+                    </div>
+                </div>
+                <div class="head-navigation-right">
+                	<div class="redaction">
+                    	<p>Сменить <a href="javascript:ShowSet()">настройки</a></p>
+                    </div>
+                	<div class="out">
+                    	<a href="#">Выйти</a>
+                    </div>
+                </div>
+            </div>
+            <div class="available">
+            	<div class="sum_text">
+                	вам<br>доступно
+                </div>
+            	<div class="sum">
+                	54 700<span>o</span>
+                </div>
+            </div>
+            <div class="line">
+            	<div class="numbers">
+                	<table>
+                    	<tr><td>0<span>o</span></td><td>20 000<span>o</span></td><td>40 000<span>o</span></td><td>60 000<span>o</span></td><td>80 000<span>o</span><font>100 000<span>o</span></font></td></tr>
+                    </table>
+                	
+                </div>
+                <div class="substrate">
+                	<div class="gradient"></div>
+                </div>
+            </div>
+            <div class="information">
+            	<div class="value">
+                	<p>Сколько</p>
+                    <form id="value">
+                        <div id="slider"></div>
+                    	<input type="text" id="sum" maxlength="7" autocomplete="off">
+                        <label>o</label>
+                    </form>
+                </div>
+                <div class="whom">
+                    <p>Куда</p>
+                    <p><a href="javascript:allCARD()">Рабочая карта</a><font>**** **** **** 4596</font></p>
+                    <div class="whom-popup">
+                    	<div class="close-up" onClick="PopUpHide()"></div>
+                    	<ul>
+                        	<li class="alfa"><span>Рабочая карта</span> <font>**** **** **** 4596</font></li>
+                            <li class="sbb"><a href="#">Сбербанк</a> <font>**** **** **** 6512</font></li>
+                            <li class="alfa"><a href="#">Карта для развлечений</a> <font>**** **** **** 7894</font></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="add">
+                	<a href="javascript:ShowCARD()">Добавить карту или счет</a>
+                </div>
+                <button id="activation" onClick="ShowMADE()"><span>Перевести</span></button>
+              </div>
+        </header>
+        <div class="content">
+        	<div class="main-left">
+            	<div class="info_credit">
+                	<h3>Информация по кредиту</h3>
+                    <ul>
+                    	<li>Одобренный кредитный лимит — 100 000<span>o</span></li>
+                        <li>Осталось выплатить по кредиту — 45 300<span>o</span></li>
+                        <li><font>Дата следующего платежа — 15.06.2014<dd></dd></font><a href="javascript:ShowDELAY()">Отложить платеж</a></li>
+                        <li>Минимальный платеж — 3 240<span>o</span></li>
+                    </ul>
+                    <div class="early-credit">
+                    	<p id="date"><a href="javascript:ShowREK()">Реквизиты</a> для погашения кредита</p>
+                        <p id="early"><a href="javascript:ShowCycle()">Дострочное погашение кредита</a></p>
+                    </div>
+                </div>
+                <div class="transaction">
+                	<div class="date_name">
+                    	<h3>Транзакции по кредиту</h3>
+                    	<form>
+                        	<input type="text" class="data" placeholder="Диапазон дат">
+                            <input type="text" class="name" placeholder="Дата, описание">
+                        </form>
+                    </div>
+                    <table cellpadding="0" cellspacing="0" border="0">
+                    	<thead><tr><td style="width:15px;"></td><td style="width:100px;">Дата</td><td>Описание</td><td style="width:100px; text-align:right;">Сумма</td></tr></thead>
+                        <tr class="expence"><td><div></div></td><td>05.06.2014</td><td>Рабочая карта, 4567 8907 5678 4596</td><td><span>- 10 000 000<font>o</font></span></td></tr>
+                        <tr class="income"><td><div></div></td><td>05.06.2014</td><td>Рабочая карта, 4567 8907 5678 4596</td><td><span>- 65 300<font>o</font></span></td></tr>
+                        <tr class="income"><td><div></div></td><td>05.06.2014</td><td>Рабочая карта, 4567 8907 5678 4596</td><td><span>- 65 300<font>o</font></span></td></tr>
+                        <tr class="income"><td><div></div></td><td>05.06.2014</td><td>Рабочая карта, 4567 8907 5678 4596</td><td><span>- 65 300<font>o</font></span></td></tr>
+                        <tr class="income"><td><div></div></td><td>05.06.2014</td><td>Рабочая карта, 4567 8907 5678 4596</td><td><span>- 65 300<font>o</font></span></td></tr>
+                        <tr class="expence"><td><div></div></td><td>05.06.2014</td><td>Рабочая карта, 4567 8907 5678 4596</td><td><span>- 10 000 000<font>o</font></span></td></tr>
+                        <tr class="expence"><td><div></div></td><td>05.06.2014</td><td>Рабочая карта, 4567 8907 5678 4596</td><td><span>- 10 000 000<font>o</font></span></td></tr>
+                        <tr class="expence"><td><div></div></td><td>05.06.2014</td><td>Рабочая карта, 4567 8907 5678 4596</td><td><span>- 10 000 000<font>o</font></span></td></tr>
+                        <tr class="expence"><td><div></div></td><td>05.06.2014</td><td>Рабочая карта, 4567 8907 5678 4596</td><td><span>- 10 000 000<font>o</font></span></td></tr>
+                        <tr class="expence"><td><div></div></td><td>05.06.2014</td><td>Рабочая карта, 4567 8907 5678 4596</td><td><span>- 10 000 000<font>o</font></span></td></tr>
+                    </table>
+                    <button id="else">Показать еще</button>
+                </div>
+            </div>
+            <div class="main-right">
+            	<h3>Погасить кредит</h3>
+                <div class="mail">
+                	Совершить межбанковский перевод посредством Интернет-Банка любого банка или в офисе любого банка по Вашим реквизитам для погашения кредита.
+                </div>
+                <div class="translate">
+                	Перевод с карты любого банка на счет для погашения кредита в 2Тбанке.
+                </div>
+                <div class="bank">
+                	Платеж в офисе любого другого банка по Вашим реквизитам для погашения кредита.
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+        	<div class="phone">
+            	<div class="left-phone">
+                	Свяжитесь с нами
+                </div>
+                <div class="right-phone">
+                	<h2>8-800-100-94-34</h2>
+						+7 (495) 597-78-88
+                </div>
+            </div>
+            <div class="link">
+            	<ul>
+                	<li><a href="#"><span>c</span>Свяжитесь с нами</a></li>
+                    <li><a href="#"><span>b</span>Звонок с сайта</a></li>
+                    <li><a href="#"><span>a</span>Чат со специалистом</a></li>
+                </ul>
+            </div>
+            <div class="contacts">
+            	<ul>
+                	<li><a href="#">Сайт банка</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="cellar">
+            	<p>2TBank.ru и 2ТБанк являются торговыми марками Банк — Т (ОАО).</p>
+                <p>Лицензия Банка России №625</p>
+            </div>
+        </div>
+    </div>
+    <div class="popup">
+    	<div class="bg-popup" id="bg-popup" onClick="PopUpHide()"></div>
+        <div class="popup-status" id="popup-made">
+        	<div class="close" onClick="PopUpHide()"></div>
+            <h4>Кредит на карту</h4>
+            <div class="status-left">o</div>
+            <div class="status-right">
+            	<p>Павел Александрович,<br>вы перевели <font>51 000</font><span>o</span><br>на карту **** **** **** 4596</p>
+                <p>Деньги появятся на карте в течении часа,<br>если этого не произойдет позвоните нам.</p>
+                <p><font>8 (495) 100-12-13</font><br>код вашей операции — 1564983</p>
+            </div>
+        </div>
+        <div class="popup-status" id="popup-error">
+        	<div class="close" onClick="PopUpHide()"></div>
+            <h4>Упс, что-то пошло не так...</h4>
+            <div class="status-left-erors"></div>
+            <div class="status-right">
+            	<p>Описание ошибки и того что нужно делать,<br>чтобы её исправить.</p>
+            </div>
+        </div>
+        <div class="popup-status" id="popup-delay">
+        	<div class="close" onClick="PopUpHide()"></div>
+            <h4>Отложенный платеж</h4>
+            <div style="display:table; margin-left:35px;">
+                <div class="delay-left">
+                    <p>Выберите количество недель</p>
+                    <form>
+                        <input type="radio" checked id="one" name="week">
+                            <label for="one"><span>1 неделя</span></label>
+                        <input type="radio" id="two" name="week">
+                            <label for="two"><span>2 недели</span></label>
+                        <input type="radio" id="three" name="week">
+                            <label for="three"><span>3 недели</span></label>
+                    </form>
+                </div>
+                <div class="delay-right">
+                    <p>Комиссия</p>
+                    <font>506<span>o</span></font>
+                </div>
+            </div>
+            <button id="activ-popup"><span>Отложить платеж</span></button>
+        </div>
+        <div class="popup-status" id="popup-details">
+        	<div class="close"  onClick="PopUpHide()"></div>
+            <h4>Реквизиты для банковского перевода<span></span></h4>
+            <div class="detalils">
+                <p>Банк-Т (ОАО)</p>
+                <p><span style="letter-spacing:1.5px">ИНН/КПП:</span> 2315126160 / 775001001</p>
+                <p><span style="letter-spacing:1.5px">БИК:</span> 044579436</p>
+                <p><span>Корр. счет:</span> 30101810700000000436 (4 отд. в Москве)</p>
+                <p><span>Номер счета:</span> 4081 7810 1000 1012 5727</p>
+                <p><span>Получатель платежа:</span> Павел Александрович Кулигин </p>
+                <p><span>Назначение платежа:</span> платежи по кредиту/погашение кредита, процентов. Без <span style="letter-spacing:1.5px; color:#343434">НДС</span>. </p>
+                <div class="send-data">
+                	<form>
+                    	<p>Отправить по эл. почте</p>
+                        <input type="email" placeholder="Эл. почта"  />
+                        <button id="send" ><span>Отправить</span></button>
+                        <p>Отправить смс</p>
+                        <input id="phone" type="tel" maxlength="18" placeholder="Номер телефона" />
+                        <button id="send"><span>Отправить</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="new-card-account" class="popup-status">
+            <div class="popup-status" id="popup-new-account">
+                <div class="close" onClick="PopUpHide()"></div>
+                <div class="var">Добавление <span onClick="ShowCARD()">карты</span> или <font>счета</font></div>
+                <form>
+                    <div class="form">
+                        <input type="text" placeholder="Номер счета"/>
+                        <input type="text" placeholder="БИК банка"/>
+                        <input type="text" placeholder="Название счета"/>
+                    </div>
+                    <div class="confirmation">
+                        <div class="left-confirmation">
+                            <p>Подтверждение по смс</p>
+                            <input type="text" placeholder="Введите код"/>
+                        </div>
+                        <div class="right-confirmation">
+                            <a href="#">Получить код</a>
+                            <button id="new-account"><span>Добавить счет</span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="popup-status" id="popup-new-card">
+                <div class="close" onClick="PopUpHide()"></div>
+                <div class="var">Добавление <font>карты</font> или <span onClick="ShowCARD2()">счета</span></div>
+                <form>
+                    <div class="new-card-main">
+                        <div class="new-card">
+                            <div class="alf-bank"></div>
+                            <div class="number-card">
+                                <input type="text" maxlength="4" placeholder="" />
+                                <input type="text" maxlength="4" placeholder="" />
+                                <input type="text" maxlength="4" placeholder="" />
+                                <input type="text" maxlength="4" placeholder="" />
+                            </div>
+                            <div class="name-card">
+                                <input type="text" placeholder="CARDHOLDER NAME" />
+                            </div>
+                        </div>
+                        <div class="input">
+                            <input type="text" placeholder="Название карты"/>
+                        </div>
+                    </div>
+                    <div class="confirmation">
+                        <div class="left-confirmation">
+                            <p>Подтверждение по смс</p>
+                            <input type="text" placeholder="Введите код"/>
+                        </div>
+                        <div class="right-confirmation">
+                            <a href="#">Получить код</a>
+                            <button id="new-account"><span>Добавить карту</span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="popup-status" id="popup-settings">
+            <div class="new-phone">
+            	<div class="close" onClick="PopUpHide()"></div>
+                <div class="var">Сменить <dd><span onClick="ShowSet()">логин</span>,</dd> <span onClick="ShowPASS()">пароль</span> или <font>номер телефона</font></div>
+                <div class="main-settings">
+                	<div class="left-settings">
+                    	<form>
+                        	<div class="new-date">
+                            	<input id="nphone" type="tel" placeholder="Новый номер"/>
+                            </div>
+                            <div class="confirmation">
+                        		<div class="left-confirmation">
+                            	<p>Подтверждение по смс</p>
+                            	<input type="text" placeholder="Введите код"/>
+                        	</div>
+                        	<div class="right-confirmation">
+                            	<a href="#">Получить код</a>
+                           		<button id="new-account"><span>Сменить номер</span></button>
+                        	</div>
+                    </div>
+                        </form>
+                    </div>
+                    <div class="right-settings">
+                    	Привязка нового номера будет одобрена в течении 1 часа с момента  подачи заявки
+                    </div>
+                </div>
+            </div>
+            <div class="new-login">
+            	<div class="close" onClick="PopUpHide()"></div>
+                <div class="var">Сменить <font>логин,</font> <span onClick="ShowPASS()">пароль</span> или <span onClick="ShowPHONE()">номер телефона</span></div>
+                <div class="main-settings">
+                	<div class="left-settings">
+                    	<form>
+                        	<div class="new-date">
+                            	<input type="text" placeholder="Новый логин"/>
+                                <input type="text" placeholder="Пароль"/>
+                            </div>
+                            <button id="send"><span>Сменить логин</span></button>
+                        </form>
+                    </div>
+                    <div class="right-settings">
+                    	После подтверждения изменения логина вы будете перемещены <br> на страницу входа
+                    </div>
+                </div>
+            </div>
+            <div class="new-password">
+            	<div class="close" onClick="PopUpHide()"></div>
+                <div class="var">Сменить <dd><span onClick="ShowSet()">логин</span>,</dd> <font>пароль</font> или <span onClick="ShowPHONE()">номер телефона</span></div>
+                <div class="main-settings">
+                	<div class="left-settings">
+                    	<form>
+                        	<div class="new-date">
+                            	<input type="text" placeholder="Текущий пароль"/>
+                                <input type="text" placeholder="Новый пароль"/>
+                                <input type="text" placeholder="Еще раз новый пароль"/>
+                            </div>
+                            <button id="send"><span>Сменить пароль</span></button>
+                        </form>
+                    </div>
+                    <div class="right-settings">
+                    	После подтверждения изменения пароля вы будете перемещены на страницу входа
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-status" id="popup-cycle">
+        	<div class="cycle-complete">
+                <div class="close" onClick="PopUpHide()"></div>
+                <div class="var">Досрочное погашение кредита</div>
+                <form>
+                    <div class="left-cycle">
+                        <p>Выберите вид погашения</p>
+                        <div class="type">
+                            <span>Полное</span>
+                            <font><dd onClick="ShowPart()">Частичное</dd></font>
+                        </div>
+                    </div>
+                    <div class="right-cycle">
+                        <p>К погашению</p>
+                        <div class="repayment">
+                            <p>54 700<span>o</span></p>
+                        </div>
+                    </div>
+                    <button id="send"><span>Погасить кредит</span></button>
+                </form>
+            </div>
+            <div class="cycle-part">
+            	<div class="close" onClick="PopUpHide()"></div>
+                <div class="var">Досрочное погашение кредита</div>
+                <form>
+                    <div class="left-cycle">
+                        <p>Выберите вид погашения</p>
+                        <div class="type">
+                            <font><dd  onClick="ShowCycle()">Полное</dd></font>
+                            <span>Частичное</span>
+                        </div>
+                    </div>
+                    <div class="right-cycle">
+                        <p>К погашению</p>
+                        <div class="repayment">
+                            <input type="text" maxlength="10" placeholder="Сумма" /><span>o</span>
+                        </div>
+                    </div>
+                    <button id="send"><span>Погасить кредит</span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
