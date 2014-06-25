@@ -134,7 +134,7 @@ jQuery(document).ready(function () {
 					}
 
 
-				}, 4000)
+				}, 2000)
 
 			} else {
 
@@ -154,7 +154,7 @@ jQuery(document).ready(function () {
 
 						}
 
-					}, 4000)
+					}, 2000)
 				} else {				
 					$("#slider").slider('value',value)
 					$("#sum").val( number_format(value) )
