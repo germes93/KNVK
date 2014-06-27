@@ -175,7 +175,7 @@ jQuery(document).ready(function () {
 
 		click: function () {
 			$(this).val('')
-			$(this).putCursorAtEnd()
+			// $(this).putCursorAtEnd()
 		},
 
 		focus: function (e) {
